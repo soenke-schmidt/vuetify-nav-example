@@ -2,7 +2,7 @@
   <nav>
     <v-app-bar app fixed clipped-left>
       <v-container class="pa-0 fill-height">
-        <NuxtLink to="/">
+        <NuxtLink to="/" title="Startseite">
           <v-img
             max-height="130"
             max-width="130"
@@ -58,7 +58,7 @@ export default {
               },
               {
                 text: 'External 2',
-                href: 'https://www.ibm.com'
+                href: 'https://www.example.com'
               }
             ]
           },
@@ -85,7 +85,7 @@ export default {
             subNavigationItems: [
               {
                 text: 'External 3',
-                to: '/i-do-notxist'
+                to: '/i-do-not-exist'
               }
             ]
           }
