@@ -17,7 +17,9 @@
           :cols="menuColumns"
         >
           <v-list-item-group>
-            <v-subheader v-if="subNavigationGroup.text">{{ subNavigationGroup.text }}</v-subheader>
+            <v-subheader v-if="subNavigationGroup.text">
+              {{ subNavigationGroup.text }}
+            </v-subheader>
             <v-list-item
               v-for="(
                 subNavgitationItem, sniIndex
@@ -57,6 +59,10 @@ export default {
     menuOpen: false
   }),
   computed: {
+    // Amount of dropdown columns is decided by the amount of subnavigation groups.
+    // 1 group => 1 columns
+    // 2 groups => 2 columns
+    // >= 3 groups => 3 columns
     menuColumns () {
       return this.subNavigationGroups && this.subNavigationGroups.length > 2
         ? 4
