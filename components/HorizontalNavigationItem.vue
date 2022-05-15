@@ -16,7 +16,7 @@
           :key="`sng-${sngIndex}`"
           :cols="menuColumns"
         >
-          <v-list-item-group :key="`sng-${sngIndex}`">
+          <v-list-item-group>
             <v-subheader>{{ subNavigationGroup.text }}</v-subheader>
             <v-list-item
               v-for="(
