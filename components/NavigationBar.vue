@@ -88,18 +88,25 @@ export default {
                 to: '/i-do-not-exist'
               }
             ]
-          },
-          {
-            // text: 'Subnavigation Group 5',
-            subNavigationItems: [
-              {
-                text: 'Group Without Text',
-                to: '/i-do-not-exist'
-              }
-            ]
           }
 
         ]
+      },
+      {
+        text: 'Menu 2',
+        subNavigationGroups: [{
+          // text: 'No Text for this group',
+          subNavigationItems: [
+              {
+                text: '404',
+                to: '/i-do-not-exist'
+              },
+              {
+                text: '404',
+                to: '/i-do-not-exist'
+              }
+            ]
+        }]
       }
     ]
   })
