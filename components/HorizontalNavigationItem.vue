@@ -17,7 +17,7 @@
           :cols="menuColumns"
         >
           <v-list-item-group>
-            <v-subheader>{{ subNavigationGroup.text }}</v-subheader>
+            <v-subheader v-if="subNavigationGroup.text">{{ subNavigationGroup.text }}</v-subheader>
             <v-list-item
               v-for="(
                 subNavgitationItem, sniIndex

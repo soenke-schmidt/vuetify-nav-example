@@ -88,6 +88,14 @@ export default {
                 to: '/i-do-not-exist'
               }
             ]
+          },
+          {
+            subNavigationItems: [
+              {
+                text: 'Group Without Text',
+                to: '/i-do-not-exist'
+              }
+            ]
           }
 
         ]
