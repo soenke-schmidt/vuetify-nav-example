@@ -97,15 +97,15 @@ export default {
         subNavigationGroups: [{
           // text: 'No Text for this group',
           subNavigationItems: [
-              {
-                text: '404',
-                to: '/i-do-not-exist'
-              },
-              {
-                text: '404',
-                to: '/i-do-not-exist'
-              }
-            ]
+            {
+              text: '404',
+              to: '/i-do-not-exist'
+            },
+            {
+              text: '404',
+              to: '/i-do-not-exist'
+            }
+          ]
         }]
       }
     ]
