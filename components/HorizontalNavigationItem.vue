@@ -9,7 +9,7 @@
         <v-icon>mdi-chevron-down</v-icon>
       </v-btn>
     </template>
-    <v-list>
+    <v-list dense nav>
       <v-row dense>
         <v-col
           v-for="(subNavigationGroup, sngIndex) in subNavigationGroups"

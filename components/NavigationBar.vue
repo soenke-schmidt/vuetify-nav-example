@@ -19,22 +19,32 @@
           />
         </template>
         <v-spacer />
-        <v-app-bar-nav-icon v-if="true" @click.stop="drawer = !drawer" />
+        <v-app-bar-nav-icon v-if="$vuetify.breakpoint.smAndDown" @click.stop="drawer = !drawer" />
       </v-container>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" app clipped>
-      <p class="font-italic pt-8">
-        TODO: Implement!
-      </p>
+    <v-navigation-drawer v-if="$vuetify.breakpoint.smAndDown" v-model="drawer" app clipped>
+      <v-col class="text-right pt-4">
+        <v-btn icon @click="drawer = false">
+          <v-icon>mdi-window-close</v-icon>
+        </v-btn>
+      </v-col>
+      <v-list dense nav>
+        <VerticalNavigationItem
+          v-for="(navigationItem, index) in navigationItems"
+          v-bind="navigationItem"
+          :key="`navigation-item-${index}`"
+        />
+      </v-list>
     </v-navigation-drawer>
   </nav>
 </template>
 
 <script>
 import HorizontalNavigationItem from './HorizontalNavigationItem.vue'
+import VerticalNavigationItem from './VerticalNavigationItem.vue'
 export default {
-  components: { HorizontalNavigationItem },
+  components: { HorizontalNavigationItem, VerticalNavigationItem },
   data: () => ({
     drawer: false,
     navigationItems: [
@@ -89,24 +99,25 @@ export default {
               }
             ]
           }
-
         ]
       },
       {
         text: 'Menu 2',
-        subNavigationGroups: [{
-          // text: 'No Text for this group',
-          subNavigationItems: [
-            {
-              text: '404',
-              to: '/i-do-not-exist'
-            },
-            {
-              text: '404',
-              to: '/i-do-not-exist'
-            }
-          ]
-        }]
+        subNavigationGroups: [
+          {
+            // text: 'No Text for this group',
+            subNavigationItems: [
+              {
+                text: '404',
+                to: '/i-do-not-exist'
+              },
+              {
+                text: '404',
+                to: '/i-do-not-exist'
+              }
+            ]
+          }
+        ]
       }
     ]
   })
